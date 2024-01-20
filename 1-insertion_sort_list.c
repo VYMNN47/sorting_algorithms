@@ -27,6 +27,13 @@ void swap(listint_t *a, listint_t *b)
 	b->next = a;
 }
 
+/**
+ * insertion_sort_list - Sorts a doubly linked list using
+ * the insertion sort algorithm.
+ * @list: Double pointer to the head of the list.
+ *
+ */
+
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *iterator, *current;
