@@ -19,17 +19,17 @@ void selection_sort(int *array, size_t size)
 
         for (i = 0; i < size - 1; i++)
         {
-                min = i;
-
-                for (j = i+1; j < size; j++)
+                for (j = size - 1, min = i + 1; j > i; j--)
                 {
                         if (array[j] < array[min])
                         {
                                 min = j;
                         }
                 }
-
-                swap(&array[min], &array[i]);
-                print_array(array, size);
+		if (array[i] > array[min])
+		{
+                	swap(&array[min], &array[i]);
+	                print_array(array, size);
+		}
         }
 }
