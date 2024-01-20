@@ -2,13 +2,13 @@
 
 void swap(int *array, size_t size, int *a, int *b)
 {
-        int temp;
+	int temp;
 
 	if (*a != *b)
 	{
 		temp = *a;
-	        *a = *b;
-        	*b = temp;
+		*a = *b;
+		*b = temp;
 		print_array(array, size);
 	}
 }
