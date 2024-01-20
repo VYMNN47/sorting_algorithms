@@ -1,5 +1,14 @@
 #include "sort.h"
 
+/**
+ * swap - Swaps two integers in an array and prints the array.
+ * @array: Pointer to the array.
+ * @size: Number of elements in the array.
+ * @a: Pointer to the first integer.
+ * @b: Pointer to the second integer.
+ *
+ */
+
 void swap(int *array, size_t size, int *a, int *b)
 {
 	int temp;
@@ -12,6 +21,16 @@ void swap(int *array, size_t size, int *a, int *b)
 		print_array(array, size);
 	}
 }
+
+/**
+ * lomuto_part - Performs the Lomuto partition scheme for quicksort.
+ * @array: Pointer to the array.
+ * @size: Number of elements in the array.
+ * @min: Minimum index for partitioning.
+ * @max: Maximum index for partitioning.
+ *
+ * Return: (i) the index where the pivot is
+ */
 
 size_t lomuto_part(int *array, size_t size, ssize_t min, ssize_t max)
 {
@@ -29,6 +48,15 @@ size_t lomuto_part(int *array, size_t size, ssize_t min, ssize_t max)
 	return (i);
 }
 
+/**
+ * quicksort_helper - Recursive helper function for quicksort.
+ * @array: Pointer to the array.
+ * @size: Number of elements in the array.
+ * @min: Minimum index for sorting.
+ * @max: Maximum index for sorting.
+ *
+ */
+
 void quicksort_helper(int *array, size_t size, ssize_t min, ssize_t max)
 {
 	if (min < max)
@@ -39,6 +67,13 @@ void quicksort_helper(int *array, size_t size, ssize_t min, ssize_t max)
 		quicksort_helper(array, size, piv + 1, max);
 	}
 }
+
+/**
+ * quick_sort - Sorts an array of integers using the quicksort algorithm.
+ * @array: Pointer to the array to be sorted.
+ * @size: Number of elements in the array.
+ *
+ */
 
 void quick_sort(int *array, size_t size)
 {
