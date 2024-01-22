@@ -1,5 +1,12 @@
 #include "sort.h"
 
+/**
+ * get_gap - Calculate the gap sequence for Shell Sort.
+ * @size: The size of the array.
+ *
+ * Return: 0
+ */
+
 int get_gap(size_t size)
 {
 	size_t seq = 1;
@@ -17,6 +24,12 @@ int get_gap(size_t size)
 
 	return (0);
 }
+
+/**
+ * shell_sort - Sort an array using Shell Sort algorithm.
+ * @array: The array to be sorted.
+ * @size: Number of elements in the array.
+ */
 
 void shell_sort(int *array, size_t size)
 {
