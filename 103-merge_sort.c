@@ -1,5 +1,12 @@
 #include "sort.h"
 
+/**
+ * merge_compare - Merge two halves of an array.
+ * @array: The array to be merged.
+ * @first: Index of the first element.
+ * @last: Index of the last element.
+ * @array_cp: Temporary array for merging.
+ */
 
 void merge_compare(int *array, size_t first, size_t last, int *array_cp)
 {
@@ -24,6 +31,14 @@ void merge_compare(int *array, size_t first, size_t last, int *array_cp)
 	print_array(array_cp + first, last - first);
 }
 
+/**
+ * merge - Recursively merge sort an array.
+ * @array: The array to be sorted.
+ * @first: Index of the first element.
+ * @last: Index of the last element.
+ * @array_cp: Temporary array for merging.
+ */
+
 void merge(int *array, size_t first, size_t last, int *array_cp)
 {
 	size_t mid;
@@ -37,6 +52,12 @@ void merge(int *array, size_t first, size_t last, int *array_cp)
 	merge(array_cp, mid, last, array);
 	merge_compare(array, first, last, array_cp);
 }
+
+/**
+ * merge_sort - Sort an array using merge sort.
+ * @array: The array to be sorted.
+ * @size: Number of elements in the array.
+ */
 
 void merge_sort(int *array, size_t size)
 {
