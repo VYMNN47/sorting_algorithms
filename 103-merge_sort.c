@@ -51,9 +51,8 @@ void merge_sort(int *array, size_t size)
 		return;
 	for (x = 0; x < size; x++)
 		array_cp[x] = array[x];
-	merge_sort(array_cp, 0, size, array);
+	merge(array_cp, 0, size, array);
 	for (x = 0; x < size; x++)
 		array[x] = array_cp[x];
 	free(array_cp);
 }
-
