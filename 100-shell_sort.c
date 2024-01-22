@@ -1,10 +1,10 @@
 #include "sort.h"
 
-size_t get_gap(size_t size)
+int get_gap(size_t size)
 {
     
     size_t seq = 1;
-    size_t prev_seq;
+    size_t prev_seq = 0;
     
     while (1)
     {
