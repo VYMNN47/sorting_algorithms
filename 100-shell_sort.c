@@ -1,6 +1,6 @@
 #include "sort.h"
 
-int get_gap(size_t size)
+size_t get_gap(size_t size)
 {
     
     size_t seq = 1;
