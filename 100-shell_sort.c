@@ -1,10 +1,10 @@
 #include "sort.h"
 
-int get_gap(int size)
+int get_gap(size_t size)
 {
     
-    int seq = 1;
-    int prev_seq;
+    size_t seq = 1;
+    size_t prev_seq;
     
     while (1)
     {
@@ -19,13 +19,12 @@ int get_gap(int size)
     return 0;
 }
 
-
 void shell_sort(int *array, size_t size)
 {
     size_t i;
     int j;
     int tmp, gap;
-    for (gap = get_gap((int)size); gap > 0; gap = (gap - 1) / 3)
+    for (gap = get_gap(size); gap > 0; gap = (gap - 1) / 3)
     {
         for (i = gap; i < size; i++)
         {
