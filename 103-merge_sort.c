@@ -5,7 +5,7 @@ void merge_compare(int *array, size_t first, size_t last, int *array_cp)
 {
 	size_t x = first, i, j, mid;
 
-	i = mid = first + (last - first) / 2;
+	i = mid = (first + last) / 2;
 	printf("Merging...\n");
 	printf("[left]: ");
 	print_array(array + first, mid - first);
@@ -28,7 +28,7 @@ void merge(int *array, size_t first, size_t last, int *array_cp)
 {
 	size_t mid;
 
-	mid = first + (last - first) / 2;
+	mid = (first + last) / 2;
 	if (last - first < 2)
 	{
 		return;
@@ -52,7 +52,5 @@ void merge_sort(int *array, size_t size)
 	for (x = 0; x < size; x++)
 		array_cp[x] = array[x];
 	merge(array_cp, 0, size, array);
-	for (x = 0; x < size; x++)
-		array[x] = array_cp[x];
 	free(array_cp);
 }
